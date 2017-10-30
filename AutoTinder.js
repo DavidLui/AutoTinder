@@ -8,7 +8,7 @@ var interval = Math.floor((Math.random() * swipeIntervalMin) + swipeIntervalMax 
 var run = setInterval(request , interval); // start setInterval as "run"
 
 function request() {
-	if (document.getElementsByClassName("profileCard__menu").length == 0 && document.getElementsByClassName("beacon CenterAlignOverlay").length == 0) {
+	if (document.getElementsByClassName("profileCard__menu").length == 0) {
 		//If you match click on keep swiping
 		if(document.evaluate("count(//span[text()='Keep Swiping'])", document).numberValue > 0){
 			document.evaluate("//span[text()='Keep Swiping']", document).iterateNext().click();
